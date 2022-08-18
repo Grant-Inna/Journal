@@ -1,0 +1,131 @@
+.header__link {
+   &:hover .header__link-icon {
+      animation: move .5s cubic-bezier(.86,0,.07,1);
+   }
+}
+@keyframes move {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(10px); }
+    50% { transform: translateX(1px); }
+    70% { transform: translateX(10px); }
+    100% { transform: translateX(1px); }
+}
+
+
+
+.pointers__item:hover {
+   .pointers__icon i:after {
+      height: 50px;
+      transition: height .3s ease-in-out;
+   }
+   .pointers__title {
+      &:before {
+         transition: left .7s ease-in, z-index .2s ease-in;
+         left: 100%;
+         
+         z-index: 25;
+      }
+   }
+   .pointers__description {
+      text-decoration-line: underline;
+      .tr();
+   }
+}
+.slider__about:hover,
+.relevance__link:hover .relevance__underline,
+.relevance__more:hover {
+   color: @color-lilac-2;
+   &:before {
+      transition: left .7s ease-in, z-index .2s ease-in;
+      left: 100%;
+      
+      z-index: 25;
+   }
+   &:after {
+      background-color: @color-lilac-2;
+      .tr();
+   }
+}
+.relevance__link:hover a.relevance__mail,
+.relevance__more:hover {
+   &:before {
+      transition: left .5s ease-in, z-index .2s ease-in;
+   }
+}
+.relevance__link:hover .relevance__underline,
+.relevance__more:hover {
+   color: @color-black;
+   &:after {
+      background-color: @color-black;
+   }
+}
+
+.slick-arrow:hover {
+   .tr();
+}
+.slick-prev:hover, .slick-prev:focus {
+    outline: none;
+    opacity: 1;
+   .slider('prev');
+}
+.slick-next:hover, .slick-next:focus {
+   outline: none;
+    opacity: 1;
+   .slider('next');
+}
+
+
+.rubric__item { /* наведение на рубрику */
+   .tr();
+   
+   &:hover .rubric__about {
+      .tr();
+      opacity: 1;
+   }
+   &:hover .rubric__title {
+      .tr();
+      z-index: 20;
+      color: @color-blue-3;
+   }
+}
+
+
+.button-state:hover { /* нажатие на кнопку */
+   background-color: @color-lilac-1-o9;
+   .tr();
+}
+.button-state:active,
+.button-state:focus { /* нажатие на кнопку */
+   background-color: darken( @color-lilac-1, 10% );
+   .tr();
+}
+
+
+
+.menu__item:hover {
+   /*&:after {
+      .tr();
+      width: 110%;
+   }*/
+   color: @color-lilac-2;
+   .tr();
+}
+.become__holder {
+   &:hover:after {
+      top: 0;
+      left: 0;
+      bottom: 0;
+      height: 100%;
+      
+      .tr();
+      transform: rotateX(0);
+   }
+}
+
+
+
+
+
+
+
+@import "elements-hover";

@@ -1,0 +1,92 @@
+.img() {
+   background-repeat: no-repeat;
+   background-size: contain;
+}
+.image( @name ) {
+   background-image: url("../data/icons/@{name}.svg");
+};
+
+.header_after() {
+   .img();
+   background-image: url("../data/bg/header.svg");
+   background-position: top;
+}
+.arrow-white() {
+   .img();
+   background-image: url("../data/icons/arrow-white.svg");
+   background-position: center;
+}
+
+.pointer-icon( @n ) {
+   background-image: url("../data/icons/pointer-@{n}.svg");
+}
+
+.slider-before() {
+   .img();
+   background-image: url("../data/bg/slider-mg.svg");
+   background-position: bottom;
+}
+.slider( @name ) {
+   background-image: url("../data/icons/slider-@{name}.svg");
+   background-size: contain;
+}
+
+.cover-rectangle() {
+   background-image: url("../data/bg/cover-rectangle.svg");
+   background-position: bottom left;
+   background-repeat: no-repeat;
+   background-size: 100% 75%;
+}
+
+
+.about-after() {
+   background-image: url("../data/hand/all-in.svg");
+   background-position: bottom left;
+   background-repeat: no-repeat;
+   background-size: contain;
+}
+
+.relevance-after() {
+   background-image: url("../data/icons/handsvg.svg");
+   background-position: top right;
+   background-repeat: no-repeat;
+   background-size: contain;
+}
+.relevance-icon( @n ) {
+   background-image: url("../data/icons/relevance-@{n}.svg");
+}
+
+
+
+
+
+
+
+
+
+
+
+.become_after() {
+   .img();
+   background-image: url("../data/bg/paper.svg");
+   background-position: center;
+}
+
+
+.footer_after() {
+   .img();
+   background-image: url("../data/bg/footer.svg");
+   background-position: center;
+}
+.logo_mp() {
+   .img();
+   background-image: url("../data/logo/mp.png");
+   background-position: left;
+}
+.logo_ficto() {
+   .img();
+   background-image: url("../data/logo/ficto.svg");
+   background-position: left;
+}
+
+

@@ -1,0 +1,11 @@
+mixin slider( img, number, date )
+   .slider__main
+      .slider__magazine_holder
+         .slider__cover
+            img( src='assets/images/magazines/#{img}' ).slider__cover_image
+         .slider__info
+            .slider__number #{number}
+            .slider__dating #{date}
+            .slider__buttons
+               a( href='' ).slider__about содержание
+               a( href='' ).slider__download.button-state скачать
