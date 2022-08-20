@@ -1,9 +1,9 @@
 $(document).ready(function () {
    /* плавный скрол */
    
-   if ($('.menu__holder').length > 0) {
+   if ($('.nav__link').length > 0) {
     
-      $('.menu__item').on( 'click', function(event) {
+      $('.nav__link').on( 'click', function(event) {
          
          event.preventDefault();
          

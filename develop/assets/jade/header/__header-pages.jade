@@ -1,0 +1,17 @@
+mixin header( title, section, section1, section2, section3, section4 )
+   header.header__holder
+      .wrapper.header__content
+         .header__main
+            a( href='./index.html' ).header__logo
+               h1.h1.mb-05 Информатизация
+                  br
+                  | образования
+                  br
+                  | и&nbsp;науки
+               .h3  научно&ndash;методический журнал
+            include ../menu/__menu-pages
+            +menu-page( section, section1, section2, section3, section4 )
+         h2.header__title #{title}
+      .header__line
+
+

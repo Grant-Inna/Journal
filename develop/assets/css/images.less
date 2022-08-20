@@ -11,17 +11,27 @@
    background-image: url("../data/bg/header.svg");
    background-position: top;
 }
+.header_content-after() {
+   .img();
+   background-image: url("../data/icons/header-icon.svg");
+   background-position: bottom right;
+}
+.header-page_after() {
+   .img();
+   background-image: url("../data/bg/header-page.svg");
+   background-position: top right;
+}
 .arrow-white() {
    .img();
    background-image: url("../data/icons/arrow-white.svg");
    background-position: center;
 }
 
-.pointer-icon( @n ) {
+.pointer_icon( @n ) {
    background-image: url("../data/icons/pointer-@{n}.svg");
 }
 
-.slider-before() {
+.slider_before() {
    .img();
    background-image: url("../data/bg/slider-mg.svg");
    background-position: bottom;
@@ -31,7 +41,7 @@
    background-size: contain;
 }
 
-.cover-rectangle() {
+.cover_rectangle() {
    background-image: url("../data/bg/cover-rectangle.svg");
    background-position: bottom left;
    background-repeat: no-repeat;
@@ -39,30 +49,22 @@
 }
 
 
-.about-after() {
+.about_after() {
    background-image: url("../data/hand/all-in.svg");
    background-position: bottom left;
    background-repeat: no-repeat;
    background-size: contain;
 }
 
-.relevance-after() {
+.relevance_after() {
    background-image: url("../data/icons/handsvg.svg");
    background-position: top right;
    background-repeat: no-repeat;
    background-size: contain;
 }
-.relevance-icon( @n ) {
+.relevance_icon( @n ) {
    background-image: url("../data/icons/relevance-@{n}.svg");
 }
-
-
-
-
-
-
-
-
 
 
 
@@ -90,3 +92,10 @@
 }
 
 
+/* pages */
+
+.requirements_icon() {
+   .img();
+   background-image: url("../data/icons/requirements-icon.svg");
+   background-position: top left;
+}

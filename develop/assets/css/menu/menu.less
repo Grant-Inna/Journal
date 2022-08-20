@@ -36,6 +36,8 @@
    margin-left: (60px / 2);
    margin-right: (60px / 2);
    
+   .tr();
+   
    .lg-block({
       margin-left: (40px / 2);
       margin-right: (40px / 2);
@@ -44,4 +46,21 @@
       margin-left: (20px / 2);
       margin-right: (20px / 2);
    });
+}
+
+.pages__menu_holder {
+    position: relative;
+   z-index: 20;
+   margin-bottom: 6.25rem;
+   .justify-end();
+   .xl-block({
+      margin-bottom: 5rem;
+   });
+   
+   color: @color-black;
+
+}
+.pages__menu_holder .active {
+   color: @color-lilac-1;
+   .tr();
 }
