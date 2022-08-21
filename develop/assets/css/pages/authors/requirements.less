@@ -7,8 +7,115 @@ section.requirements__holder {
 .requirements__content {  /* wrapper */
 }
 .requirements__list_holder {
+   position: relative;
+   z-index: 20;
    max-width: 1005px;
    width: 80%;
-   background: rgba(255, 255, 255, 0.95);
-box-shadow: 5px 4px 20px rgba(0, 0, 0, 0.15);
+   margin-left: auto;
+
+   padding: 2.6rem 3.8rem 3.3rem;
+   box-sizing: border-box;
+   
+   background-color: @color-white-o9;
+   box-shadow: @box-shadow-15;
+   
+   .lg( width, 100% )
+}
+.requirements__section {
+   padding: 1.5rem 0;
+   
+   border-bottom: 1px solid @color-black;
+}
+.requirements__question {
+   .flex();
+   .justify-between();
+   .items-center();
+   
+   span {
+      .roboto-regular();
+      font-size: 1.9rem;
+      line-height: 2.19rem;
+      letter-spacing: 0.02em;
+      color: @color-black;
+   }
+   .requirements__question_icon {
+      width: 1.9rem;
+      height: 2px;
+      background-color: @color-black;
+   }
+}
+.requirements__answer {
+   margin-left: 2rem;
+   margin-bottom: 1rem;
+   
+   display: none;
+}
+
+.requirements__item {
+   position: relative;
+   z-index: 10;
+   
+   margin-top: 2rem;
+   
+   letter-spacing: 0.02em;
+   color: @color-black;
+   
+   b {
+      .roboto-bold();
+      font-size: 1.2rem;
+      line-height: 1.4rem;
+   }
+   span {
+      .roboto-regular();
+      font-size: 1.1rem;
+      line-height: 1.3rem;
+   }
+}
+
+.question-theme {
+   cursor: pointer;
+}
+
+.requirements__rules {
+   max-width: 1000px;
+   width: 70%;
+   min-width: 21.88rem;
+   margin-left: auto;
+   margin-right: auto;
+}
+.requirements__rule {
+   position: relative;
+   z-index: 10;
+   margin-left: 4rem;
+   .roboto-thin();
+   font-size: 1.1rem;
+   line-height: 1.3rem;
+   letter-spacing: 0.02em;
+   color: @color-black;
+   
+   margin-bottom: 2rem;
+}
+
+
+
+
+
+
+/* list */
+
+.requirements__holder ol {
+   .roboto-regular();
+   list-style: none;
+   counter-reset: li;
+   
+   padding-inline-start: 1.5rem;
+}
+.requirements__holder ol li {
+   margin-top: .5rem;
+}
+.requirements__holder li:before {
+   /* Определяем элемент, который будет нумероваться — li. Псевдоэлемент before указывает, что содержимое, вставляемое при помощи свойства content, будет располагаться перед пунктами списка. Здесь же устанавливается значение приращения счетчика (по умолчанию равно 1). */
+   counter-increment: li;
+   /* С помощью свойства content выводится номер пункта списка. counters() означает, что генерируемый текст представляет собой значения всех счетчиков с таким именем. Точка в кавычках добавляет разделяющую точку между цифрами, а точка с пробелом добавляется перед содержимым каждого пункта списка */
+   content: counters(li, ".") ". ";
 }

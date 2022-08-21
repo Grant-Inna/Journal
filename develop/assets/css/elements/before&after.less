@@ -247,11 +247,67 @@ footer.footer__holder {
 section.requirements__holder:before {
    .after();
    position: absolute;
-   top: -3.5rem;
+   top: -3rem;
    left: 2vw;
    width: 35%;
    min-width: 45rem;
    height: 35rem;
    //min-height: 37.5rem;
    .requirements_icon();
+}
+.requirements__question_icon:after {
+    .after();
+    width: 1.9rem; /*30*/
+    height: 2px;
+    background-color: @color-black;
+
+    transform: rotate(90deg);
+    transition: all .2s;
+}
+.open.requirements__section .requirements__question_icon:after {
+    transform: rotate(0);
+    transition: all .2s;
+}
+.requirements__item:after {
+   .after();
+   position: absolute;
+   top: 0;
+   left: -2rem;
+   width: .63rem;
+   height: .63rem;
+   
+   transform: translateX(.31rem) translateY(.28rem);
+   background-color: @color-lilac-2;
+   border-radius: 50px;
+}
+.requirements__rule {
+   &:after {
+      .after();
+      position: absolute;
+      z-index: 15;
+      top: 0;
+      left: -5rem;
+      width: 1.6rem;
+      height: 1.6rem;
+      
+      transform: translateX(.8rem);
+      .requirements_rule_icon();
+   }
+   &:before {
+      .after();
+      position: absolute;
+      z-index: 5;
+      top: 0;
+      left: calc( -5rem + 1.6rem );
+      width: 1px;
+      height: calc( 2rem + 100% );
+      background-color: @color-blue-2;
+   }
+}
+.requirements__rule {
+   &:last-child {
+      &:before {
+         display: none;
+      }
+   }
 }

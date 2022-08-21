@@ -1,7 +1,7 @@
 mixin menu( section )
    nav.menu__holder( class='#{section}__menu_holder' )
-      a( href='#about' ).nav__link.menu__item( class='#{section}__menu_item' ) О журнале
-      a( href='./authors.html' ).menu__item( class='#{section}__menu_item' ) Авторам
-      a( href='./editors.html' ).menu__item( class='#{section}__menu_item' ) Редакция
-      a( href='./archive.html' ).menu__item( class='#{section}__menu_item' ) Архив
-      a( href='./contact.html' ).menu__item( class='#{section}__menu_item' ) Контакты
+      a( href='#about', class='#{section}__menu_item' ).nav__link.menu__item О журнале
+      a( href='./authors.html', class='#{section}__menu_item' ).menu__item Авторам
+      a( href='./editors.html', class='#{section}__menu_item' ).menu__item Редакция
+      a( href='./archive.html', class='#{section}__menu_item' ).menu__item Архив
+      a( href='./contact.html', class='#{section}__menu_item' ).menu__item Контакты

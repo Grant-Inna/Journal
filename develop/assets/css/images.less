@@ -73,7 +73,12 @@
    background-image: url("../data/bg/paper.svg");
    background-position: top left;
    
-   .lg( background-size, cover )
+   .from( 1430px, {
+       top: -12%;
+       min-height: 145%;
+      background-position: center;
+   });
+   .lg( background-size, cover );
 }
 
 
@@ -100,4 +105,14 @@
    .img();
    background-image: url("../data/icons/requirements-icon.svg");
    background-position: top left;
+}
+.requirements_icon() {
+   .img();
+   background-image: url("../data/icons/requirements-icon.svg");
+   background-position: top left;
+}
+.requirements_rule_icon() {
+   .img();
+   background-image: url("../data/icons/pint-dot.svg");
+   background-position: center;
 }

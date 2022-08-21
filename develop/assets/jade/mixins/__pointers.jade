@@ -1,16 +1,6 @@
-mixin pointer( n, page, title, desc1, desc2, desc3 )
-   case desc2
-      when ''
-         a( href='./#{page}.html' ).pointers__item
-            .pointers__icon( class='pointer-icon-#{n}' )
-               i
-            .pointers__title #{title}
-            .pointers__description #{desc1}
-      default
-         a( href='./#{page}.html' ).pointers__item
-            .pointers__icon( class='pointer-icon-#{n}' )
-               i
-            .pointers__title #{title}
-            .pointers__description #{desc1}&nbsp;#{desc2}&nbsp;#{desc3}
-
-
+mixin pointer( n, page, title, desc )
+   a( href='./#{page}.html' ).pointers__item
+      .pointers__icon( class='pointer-icon-#{n}' )
+         i
+      .pointers__title #{title}
+      .pointers__description !{desc}
