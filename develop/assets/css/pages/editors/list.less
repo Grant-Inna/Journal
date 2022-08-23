@@ -1,0 +1,63 @@
+section.editors__holder {
+
+}
+.editors__content { /* wrapper */
+
+}
+.editors__list {
+   .row();
+   .justify-start();
+   
+   .sm( justify-content, center )
+}
+.editors__card {
+   position: relative;
+   z-index: 10;
+   overflow: hidden;
+   
+   .col();
+   .size(8);
+   .size-lg(12);
+   .size-sm(20);
+   .size-xs(24);
+   
+   
+   margin-bottom: @offset;
+   
+   .lg( margin-bottom, @offset_lg );
+   .xs( margin-bottom, @offset_xs );
+   
+   background: @color-white;
+   box-shadow: @box-shadow-15;
+   
+   padding: 1.3rem 2.1rem;
+   min-height: 240px;
+   
+   .sm( min-height, 200px )
+}
+.editors__name {
+   position: relative;
+   
+   .roboto-regular();
+   .color-black();
+   font-size: 1.25rem;
+   line-height: 1.44rem;
+   
+   margin-bottom: .4rem;
+   padding-bottom: .2rem;
+   
+   cursor: pointer;
+   
+   .tr();
+}
+.editors__position {
+   position: relative;
+   z-index: 20;
+   
+   .roboto-thin();
+   .color-black();
+   font-size: .94rem;
+   line-height: 1.1rem;
+   
+   cursor: default;
+}
