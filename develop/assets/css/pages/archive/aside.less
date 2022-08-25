@@ -1,0 +1,47 @@
+.archive__aside {
+   position: relative;
+   z-index: 30;
+}
+.archive__block {
+   margin-bottom: 2.5rem;
+}
+.archive__year {
+   position: relative;
+   z-index: 35;
+   
+   .flex();
+   .items-center();
+   
+   height: 3.1rem;
+   background-color: @color-lilac-1;
+   padding: .5rem 1rem;
+   box-sizing: border-box;
+   
+   .roboto-bold();
+   font-size: 1.5rem;
+   line-height: 1.75rem;
+   color: @color-white;
+}
+.archive__number {
+   cursor: pointer;
+   padding: 1rem 1rem;
+   font-size: 1.88rem;
+   line-height: 2.19rem;
+   letter-spacing: 0.02em;
+   
+   color: @color-black;
+   
+   border-bottom: 1px solid @color-black;
+   &:last-child { border-bottom-color: transparent }
+   
+   b { .roboto-bold() }
+   span { .roboto-regular() }
+   
+   .tr();
+}
+
+.archive__number.active {
+   color: @color-lilac-1
+}
+
+

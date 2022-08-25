@@ -9,11 +9,30 @@ html
          include assets/jade/header/__header-pages
          +header( 'Контакты', '', '', '', 'active' )
 
+         section.contact__holder.mb-5
+            .wrapper.contact__content
+               .contact__main_icon
+               .contact__info
+                  .contact__address.mb-2 125315, Москва, ул.&nbsp;Часовая, д.21/Б
+                  .contact__contact.mb-15
+                     .contact__icon.icon-home
+                     .contact__text
+                        b телефон
+                        a( href='tel:84950099888' ) +7 (495) 009-98-88
+                  .contact__contact
+                     .contact__icon.icon-mail
+                     .contact__text
+                        b e&ndash;mail
+                        .chief_editor__link
+                           a( href='mailto:d.kurakin@ficto.ru?subject=По вопросам публикации' ).mr-05 d.kurakin@ficto.ru;
+                           a( href='mailto:dvkurakin@mail.ru?subject=По вопросам публикации' ) dvkurakin@mail.ru
 
 
 
-      include assets/jade/sections/become-an-author
-      include assets/jade/footer/footer
+
+
+         include assets/jade/sections/become-an-author
+         include assets/jade/footer/footer
 
 
 

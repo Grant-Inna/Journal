@@ -7,13 +7,21 @@ html
    body
       #container.container-page
          include assets/jade/header/__header-pages
-         +header( 'Архив', '', '', 'active', '' )
+         +header( 'Архив выпусков', '', '', 'active', '' )
+
+         section.archive__holder.mb-5
+            .wrapper
+               .archive__content
+                  include assets/jade/pages/archive/aside
+                  include assets/jade/pages/archive/main
 
 
 
 
-      include assets/jade/sections/become-an-author
-      include assets/jade/footer/footer
+
+
+         include assets/jade/sections/become-an-author
+         include assets/jade/footer/footer
 
 
 

@@ -244,7 +244,7 @@ footer.footer__holder {
 /* PAGES */
 
 /* authors */
-section.requirements__holder:before {
+.requirements__content:before {
    .after();
    position: absolute;
    top: -3rem;
@@ -255,6 +255,12 @@ section.requirements__holder:before {
    //min-height: 37.5rem;
    .requirements_icon();
    
+   .from( 2500px, {
+      transform: translateX(28rem);
+   });
+   .from( 2000px, {
+      transform: translateX(15rem);
+   });
    .lg( display, none )
 }
 .requirements__question_icon:after {
@@ -359,7 +365,7 @@ section.requirements__holder:before {
 .editor-icon-14:after { .editor-icon('14') }
 .editor-icon-15:after { .editor-icon('12') }
 
-.chief_editor__text a {
+.contact__text a {
    &:after {
       .after();
       z-index: 20;
@@ -382,5 +388,54 @@ section.requirements__holder:before {
       background-color: @color-white;
       
       z-index: 0;
+   }
+}
+
+.archive__journal:before {
+   .after();
+   z-index: 5;
+   
+   top: -1rem;
+   right: 0;
+   width: 29rem;
+   height: 28rem;
+   max-width: 50%;
+   .archive-main-icon();
+}
+.archive__year {
+   &:before,
+   &:after {
+      .after();
+      top: 1.46rem;
+      right: 1rem;
+      
+      width: 1.5rem;
+      height: 1.5px;
+      
+      background-color: @color-white;
+      
+      .tr();
+   }
+   &:after {
+      transform: rotate(90deg);
+   }
+}
+
+
+
+
+.contact__main_icon {
+   &:after {
+      .after();
+      top: 0;
+      left: -2rem;
+      
+      width: 22rem;
+      height: 100%;
+      .contact-main-icon();
+      .tr();
+      
+      .xl( left, 0 );
+      .md( width, 100% );
    }
 }

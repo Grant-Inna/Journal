@@ -1,0 +1,51 @@
+.archive__journal {
+   position: relative;
+   z-index: 10;
+   
+   .roboto-thin();
+}
+.journal__number {
+   .roboto-bold();
+   font-size: 2.5rem;
+   line-height: 2rem;
+   letter-spacing: 0.02em;
+   text-transform: uppercase;
+   color: @color-lilac-1;
+   
+   margin-bottom: .5rem;
+}
+.journal__date {
+   .roboto-regular();
+   .color-black();
+   font-size: 1.88rem;
+   line-height: 2.3rem;
+   text-transform: uppercase;
+   
+   margin-bottom: 2.6rem;
+}
+.journal__remember {
+   .color-black();
+   font-size: 1.1rem;
+   line-height: 1.5rem;
+   letter-spacing: 0.02em;
+   text-decoration-line: underline;
+   
+   margin-bottom: 2.25rem;
+   
+   b { .roboto-bold() }
+   span { .roboto-regular() }
+}
+.journal__content {
+   position: relative;
+   z-index: 40;
+   
+   padding: 3.75rem 1.88rem;
+   background: @color-white-o9;
+   box-shadow: @box-shadow-15;
+}
+.h4 {
+   .roboto-bold();
+   .color-black();
+   font-size: 1.88rem;
+   line-height: 1.5rem;
+}

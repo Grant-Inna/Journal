@@ -31,7 +31,7 @@
       .tr();
    }
 }
-.chief_editor__text a:hover,
+.contact__text a:hover,
 .slider__about:hover,
 .relevance__link:hover .relevance__underline,
 .relevance__underline:hover,
@@ -126,6 +126,21 @@
 }
 
 
+
+.archive__block.open .archive__year {
+   &:before,
+   &:after {
+      height: 0;
+      transform: rotate(-180deg);
+      
+      transition: height .4s ease-out, transform .4s;
+      
+   }
+}
+.archive__number:hover {
+   .tr();
+   color: @color-lilac-2;
+}
 
 
 
