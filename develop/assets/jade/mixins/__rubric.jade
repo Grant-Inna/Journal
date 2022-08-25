@@ -1,23 +1,6 @@
-mixin rubric( n, title, title2, title3 )
-   case title2
-      when ''
-         .rubric__item
-            .rubric__icon( class='rubric-icon-#{n}' )
-            .rubric__title #{title}
-            .rubric__about
-               .rubric__text Включен в&nbsp;Перечень ведущих рецензируемых научных журналов и&nbsp;изданий, в&nbsp;которых должны быть опубликованы основные научные результаты диссертаций на соискание ученых степеней доктора и&nbsp;кандидата наук. Журнал своей деятельностью помог сформировать в&nbsp;стране корпус высококвалифицированных специалистов в&nbsp;области науки и&nbsp;образования.
-      default
-         case title3
-            when ''
-               .rubric__item
-                  .rubric__icon( class='rubric-icon-#{n}' )
-                  .rubric__title #{title}&nbsp;#{title2}
-                  .rubric__about
-                     .rubric__text Включен в&nbsp;Перечень ведущих рецензируемых научных журналов и&nbsp;изданий, в&nbsp;которых должны быть опубликованы основные научные результаты диссертаций на соискание ученых степеней доктора и&nbsp;кандидата наук. Журнал своей деятельностью помог сформировать в&nbsp;стране корпус высококвалифицированных специалистов в&nbsp;области науки и&nbsp;образования.
-            default
-               .rubric__item
-                  .rubric__icon( class='rubric-icon-#{n}' )
-                  .rubric__title #{title}&nbsp;#{title2}&nbsp;#{title3}
-                  .rubric__about
-                     .rubric__text Включен в&nbsp;Перечень ведущих рецензируемых научных журналов и&nbsp;изданий, в&nbsp;которых должны быть опубликованы основные научные результаты диссертаций на соискание ученых степеней доктора и&nbsp;кандидата наук. Журнал своей деятельностью помог сформировать в&nbsp;стране корпус высококвалифицированных специалистов в&nbsp;области науки и&nbsp;образования.
-
+mixin rubric( n, title, text )
+   .rubric__item
+      .rubric__icon( class='rubric-icon-#{n}' )
+      .rubric__title !{title}
+      .rubric__about
+         .rubric__text !{text}
