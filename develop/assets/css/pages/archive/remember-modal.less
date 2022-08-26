@@ -64,11 +64,14 @@
 }
 .modal__main {
     .flex();
+   .sm( flex-direction, column );
     margin-bottom: 1.5rem;
     img {
         margin-right: 1.5rem;
         object-fit: contain;
         object-position: top;
+       
+       .sm(  margin-bottom, 1.5rem );
    }
    .h2 {
       .montserrat-bold();

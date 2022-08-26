@@ -1,26 +1,4 @@
 $(document).ready(function() {
-   /* faq */
-   
-   if($('.question-holder').length > 0 ) {
-      let $question_holder = $('.question-holder'),
-         $title = $('.question-theme');
-      $question_holder.find($title).on('click', openAnswer);
-   }
-   
-   function openAnswer() {
-      let answer = $('#question-' + $(this).data('question'));
-      
-      if ($(this).parent().hasClass('open')) {
-         answer.fadeOut();
-         $(this).parent().removeClass('open')
-      } else {
-         answer.fadeIn();
-         $(this).parent().addClass('open')
-      }
-   }
-});
-
-$(document).ready(function() {
    /* манипуляции с журналом */
    
    if($('.archive__journal').length > 0 ) {
@@ -91,6 +69,28 @@ $(document).ready(function () {
    }
    
    
+});
+
+$(document).ready(function() {
+   /* faq */
+   
+   if($('.question-holder').length > 0 ) {
+      let $question_holder = $('.question-holder'),
+         $title = $('.question-theme');
+      $question_holder.find($title).on('click', openAnswer);
+   }
+   
+   function openAnswer() {
+      let answer = $('#question-' + $(this).data('question'));
+      
+      if ($(this).parent().hasClass('open')) {
+         answer.fadeOut();
+         $(this).parent().removeClass('open')
+      } else {
+         answer.fadeIn();
+         $(this).parent().addClass('open')
+      }
+   }
 });
 
 $(document).ready(function () {
