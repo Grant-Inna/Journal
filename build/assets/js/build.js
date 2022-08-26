@@ -1,4 +1,26 @@
 $(document).ready(function() {
+   /* faq */
+   
+   if($('.question-holder').length > 0 ) {
+      let $question_holder = $('.question-holder'),
+         $title = $('.question-theme');
+      $question_holder.find($title).on('click', openAnswer);
+   }
+   
+   function openAnswer() {
+      let answer = $('#question-' + $(this).data('question'));
+      
+      if ($(this).parent().hasClass('open')) {
+         answer.fadeOut();
+         $(this).parent().removeClass('open')
+      } else {
+         answer.fadeIn();
+         $(this).parent().addClass('open')
+      }
+   }
+});
+
+$(document).ready(function() {
    /* манипуляции с журналом */
    
    if($('.archive__journal').length > 0 ) {
@@ -42,36 +64,33 @@ $(document).ready(function() {
   
 });
 
-$(document).ready(function() {
+$(document).ready(function () {
    /* открытие модального окна с текстом */
    
-   if($('.journal__remember').length > 0 ) {
+   if ($('.journal__remember').length > 0) {
       
-   
-   }
-   
-});
-
-$(document).ready(function() {
-   /* faq */
-   
-   if($('.question-holder').length > 0 ) {
-      let $question_holder = $('.question-holder'),
-         $title = $('.question-theme');
-      $question_holder.find($title).on('click', openAnswer);
-   }
-   
-   function openAnswer() {
-      let answer = $('#question-' + $(this).data('question'));
+      $('.journal__remember').on('click', showModal);
       
-      if ($(this).parent().hasClass('open')) {
-         answer.fadeOut();
-         $(this).parent().removeClass('open')
-      } else {
-         answer.fadeIn();
-         $(this).parent().addClass('open')
-      }
+      $('.modal__overlay').on( 'click', function(event) {
+         event.stopPropagation();
+         if ( $(event.target).hasClass('modal__overlay')) {
+            $(this).removeClass('visible_modal');
+         }
+    });
+      $('.modal__close').on('click', closeModal);
+      
    }
+   
+   function showModal() {
+      let $modal_data = $(this).data('modal');
+      $('.modal__overlay#' + $modal_data).addClass("visible_modal");
+   }
+   function closeModal() {
+      let $this_overlay = $(this).parents('.modal__overlay');
+     $this_overlay.removeClass('visible_modal');
+   }
+   
+   
 });
 
 $(document).ready(function () {
