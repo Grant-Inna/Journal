@@ -1,0 +1,6 @@
+mixin article( article, title, name )
+   article( data-article='article_#{article}' )
+      .journal__article !{title}
+      .journal__name
+         b.mr-05 Автор:
+         span !{name}

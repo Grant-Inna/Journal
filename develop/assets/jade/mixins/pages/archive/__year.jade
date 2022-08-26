@@ -1,17 +1,44 @@
-mixin year( n, year, num, cl )
+mixin year( n, year, num, extpa, cl, ccll )
    .archive__block.question-holder( class='#{cl}' )
       .archive__year.question-theme( data-question='#{n}' )
          span 20#{year}
       .archive__number_holder.answer-text( id='question-#{n}' )
-         .archive__number.trigger
+         .archive__number.trigger( class='#{ccll}' )
             b.mr-05 &#8470;1
-            span (#{num})
-         .archive__number.trigger
-            b.mr-05 &#8470;2
-            span (#{num+1})
-         .archive__number.trigger
-            b.mr-05 &#8470;3
-            span (#{num+2})
-         .archive__number.trigger
-            b.mr-05 &#8470;4
-            span (#{num+3})
+            i (
+            span #{num}
+            i )
+         case extpa
+            when '2'
+               .archive__number.trigger
+                  b.mr-05 &#8470;2
+                  i (
+                  span #{num+1}
+                  i )
+            when '3'
+               .archive__number.trigger
+                  b.mr-05 &#8470;2
+                  i (
+                  span #{num+1}
+                  i )
+               .archive__number.trigger
+                  b.mr-05 &#8470;3
+                  i (
+                  span #{num+2}
+                  i )
+            when '4'
+               .archive__number.trigger
+                  b.mr-05 &#8470;2
+                  i (
+                  span #{num+1}
+                  i )
+               .archive__number.trigger
+                  b.mr-05 &#8470;3
+                  i (
+                  span #{num+2}
+                  i )
+               .archive__number.trigger
+                  b.mr-05 &#8470;4
+                  i (
+                  span #{num+3}
+                  i )

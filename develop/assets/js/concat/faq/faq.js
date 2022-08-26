@@ -1,8 +1,11 @@
 $(document).ready(function() {
    /* faq */
-   let $question_holder = $('.question-holder'),
-      $title = $('.question-theme');
-   $question_holder.find($title).on('click', openAnswer);
+   
+   if($('.question-holder').length > 0 ) {
+      let $question_holder = $('.question-holder'),
+         $title = $('.question-theme');
+      $question_holder.find($title).on('click', openAnswer);
+   }
    
    function openAnswer() {
       let answer = $('#question-' + $(this).data('question'));

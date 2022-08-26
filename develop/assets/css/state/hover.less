@@ -31,6 +31,8 @@
       .tr();
    }
 }
+.journal__remember:hover,
+.journal__article:hover,
 .contact__text a:hover,
 .slider__about:hover,
 .relevance__link:hover .relevance__underline,
@@ -142,7 +144,28 @@
    color: @color-lilac-2;
 }
 
+.journal__remember:hover {
+   .tr();
+   color: @color-lilac-2;
+}
+article:hover .journal__article {
+   .tr();
+   background-size: 110% 1px;
+}
 
+.back:hover {
+   .tr();
+   .icon-back {
+      animation: move-sm .5s cubic-bezier(.86,0,.07,1);
+   }
+}
+@keyframes move-sm {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(7px); }
+    50% { transform: translateX(1px); }
+    70% { transform: translateX(7px); }
+    100% { transform: translateX(1px); }
+}
 
 
 @import "elements-hover";
