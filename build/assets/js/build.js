@@ -71,28 +71,6 @@ $(document).ready(function () {
    
 });
 
-$(document).ready(function() {
-   /* faq */
-   
-   if($('.question-holder').length > 0 ) {
-      let $question_holder = $('.question-holder'),
-         $title = $('.question-theme');
-      $question_holder.find($title).on('click', openAnswer);
-   }
-   
-   function openAnswer() {
-      let answer = $('#question-' + $(this).data('question'));
-      
-      if ($(this).parent().hasClass('open')) {
-         answer.fadeOut();
-         $(this).parent().removeClass('open')
-      } else {
-         answer.fadeIn();
-         $(this).parent().addClass('open')
-      }
-   }
-});
-
 $(document).ready(function () {
    /* читать дальше */
    
@@ -118,6 +96,52 @@ $(document).ready(function () {
    
    
 });
+
+$(document).ready(function() {
+   /* faq */
+   
+   if($('.question-holder').length > 0 ) {
+      let $question_holder = $('.question-holder'),
+         $title = $('.question-theme');
+      $question_holder.find($title).on('click', openAnswer);
+   }
+   
+   function openAnswer() {
+      let answer = $('#question-' + $(this).data('question'));
+      
+      if ($(this).parent().hasClass('open')) {
+         answer.fadeOut();
+         $(this).parent().removeClass('open')
+      } else {
+         answer.fadeIn();
+         $(this).parent().addClass('open')
+      }
+   }
+});
+
+$(document).ready(function () {
+   /* плавный скрол */
+   
+   if ($('.nav__link').length > 0) {
+    
+      $('.nav__link').on( 'click', function(event) {
+         
+         event.preventDefault();
+         
+         let id  = $(this).attr('href'),
+             top = $(id).offset().top; // получаем координаты блока
+         
+         $('body, html').animate({scrollTop: top - 30 }, 700); // плавно переходим к блоку
+   
+      });
+      
+   }
+   
+   
+});
+
+
+
 
 $(document).ready(function() {
    /* show journal content */
@@ -166,27 +190,3 @@ $(document).ready(function() {
    }
    
 });
-
-$(document).ready(function () {
-   /* плавный скрол */
-   
-   if ($('.nav__link').length > 0) {
-    
-      $('.nav__link').on( 'click', function(event) {
-         
-         event.preventDefault();
-         
-         let id  = $(this).attr('href'),
-             top = $(id).offset().top; // получаем координаты блока
-         
-         $('body, html').animate({scrollTop: top - 30 }, 700); // плавно переходим к блоку
-   
-      });
-      
-   }
-   
-   
-});
-
-
-
