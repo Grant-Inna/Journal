@@ -1,0 +1,20 @@
+mixin article_text-3( article, subject, title, type, name, about, name2, about2, name3, about3, text )
+   .article__read( id='article_#{article}' )
+      .article__subject !{subject}
+      .article__theme !{title}
+      .article__meta
+         b.mr-05 Тип статьи:
+         span #{type}
+      .article__meta
+         b.mr-05 Автор:
+         span #{name}
+      .article__author.mb-05 !{about}
+      .article__meta.mt-02
+         b.mr-05 Автор:
+         span #{name2}
+      .article__author.mb-05 !{about2}
+      .article__meta.mt-02
+         b.mr-05 Автор:
+         span #{name3}
+      .article__author !{about3}
+      .article__text !{text}
