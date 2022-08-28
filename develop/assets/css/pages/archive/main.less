@@ -32,11 +32,9 @@
    font-size: 1.1rem;
    line-height: 1.5rem;
    letter-spacing: 0.02em;
-   text-decoration-line: underline;
+   //text-decoration-line: underline;
    
    margin-bottom: 2.25rem;
-   
-   .tr();
    
    b { .roboto-bold() }
    span { .roboto-regular() }
@@ -45,6 +43,15 @@
       font-size: 1.3rem;
       line-height: 1.5rem;
    })
+}
+.journal__remember_text {
+   display: inline;
+   
+   .tr();
+   background-image: linear-gradient(to right, @color-black 0%, @color-black 100%);
+   background-repeat: repeat-x;
+   background-position: 0 100%;
+   background-size: 110% 1px;
 }
 
 .journal__holder {
@@ -90,10 +97,10 @@
    
    cursor: pointer;
    
-     background-image: linear-gradient(to right, @color-lilac-2 0%, @color-lilac-2 100%);
-     background-repeat: repeat-x;
-     background-position: 0 100%;
-     background-size: 0 1px;
+   background-image: linear-gradient(to right, @color-lilac-2 0%, @color-lilac-2 100%);
+   background-repeat: repeat-x;
+   background-position: 0 100%;
+   background-size: 0 1px;
    .tr();
    
    .sm-block({

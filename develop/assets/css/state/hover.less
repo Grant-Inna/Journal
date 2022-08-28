@@ -31,7 +31,7 @@
       .tr();
    }
 }
-.journal__remember:hover,
+
 .journal__article:hover,
 .contact__text a:hover,
 .slider__about:hover,
@@ -143,14 +143,12 @@
    .tr();
    color: @color-lilac-2;
 }
-
-.journal__remember:hover {
-   .tr();
-   color: @color-lilac-2;
-}
+.journal__remember:hover .journal__remember_text,
 article:hover .journal__article {
    .tr();
+   color: @color-lilac-2;
    background-size: 110% 1px;
+   background-image: linear-gradient(to right, @color-lilac-2 0%, @color-lilac-2 100%);
 }
 
 .back:hover {
