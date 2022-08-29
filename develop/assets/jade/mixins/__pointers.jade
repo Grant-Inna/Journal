@@ -3,4 +3,5 @@ mixin pointer( n, page, title, desc )
       .pointers__icon( class='pointer-icon-#{n}' )
          i
       .pointers__title #{title}
-      .pointers__description !{desc}
+      .pointers__description
+         span !{desc}
