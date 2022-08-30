@@ -2,7 +2,7 @@ mixin remember( n, title, end, main, about, about1, about2, about3 )
    .modal__overlay( id='remember_#{n}' )
       .modal__body
          .modal__close
-         .modal__content
+         .modal__content.scrollbar-inner
             .modal__main
                img( src='./assets/images/remember/#{n}.jpg' )
                .modal__text
