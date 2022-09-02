@@ -24,6 +24,11 @@
       height: 50rem;
       max-height: 85%;
       .header_content-after();
+      
+      transform: translateY(0);
+      animation: load_to_top 1.4s ease-in-out;
+      .tr();
+      
       .to(1550px, {
          right: -18%
       });
@@ -37,6 +42,11 @@
    }
 }
 
+@keyframes load_to_top {
+   0% { transform: translateY(60px); opacity: 0}
+   40% { opacity: 0 }
+   100% { transform: translateY(0); opacity: 1 }
+}
 .container-page header.header__holder {
    &:before {
       .after();

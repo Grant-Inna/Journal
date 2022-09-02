@@ -7,6 +7,11 @@
    
    color: @color-white;
    
+    
+      transform: translateX(0);
+      animation: load_to_left 1s ease-in-out;
+      .tr();
+   
    display: flex;
    flex-wrap: wrap;
    margin-left: (60px / -2);
@@ -63,4 +68,11 @@
 .pages__menu_holder .active {
    color: @color-lilac-1;
    .tr();
+}
+
+
+
+@keyframes load_to_left {
+   0% { transform: translateX(40px); opacity: 0}
+   100% { transform: translateX(0); opacity: 1 }
 }

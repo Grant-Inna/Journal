@@ -22,6 +22,10 @@
       position: relative;
       z-index: 30;
       
+      transform: translateY(0);
+      animation: load 1s ease-in-out;
+      .tr();
+      
       .montserrat-extrabold();
       font-size: 6.3rem;
       line-height: 7rem;
@@ -41,6 +45,10 @@
       line-height: 3.1rem;
       letter-spacing: 0.02em;
       text-transform: uppercase;
+      
+       transform: translateY(0);
+      animation: load 1.2s ease-in-out;
+      .tr();
       
       color: @color-white;
       
@@ -66,6 +74,11 @@
 .header__link {
    position: relative;
    z-index: 15;
+   
+    
+      transform: translateY(0);
+      animation: load_to_right 1s ease-in-out;
+      .tr();
    
    .flex();
    .justify-start();
@@ -179,4 +192,14 @@
    letter-spacing: 0.02em;
    text-transform: uppercase;
    color: @color-black;
+}
+
+
+@keyframes load {
+   0% { transform: translateY(-40px); opacity: 0}
+   100% { transform: translateY(0); opacity: 1 }
+}
+@keyframes load_to_right {
+   0% { transform: translateX(-40px); opacity: 0}
+   100% { transform: translateX(0); opacity: 1 }
 }
