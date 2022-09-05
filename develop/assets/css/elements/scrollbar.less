@@ -122,8 +122,9 @@
     opacity: 0.4;
 }
 
+.scrollbar-inner > .scroll-element { z-index: 50; }
 .scrollbar-inner > .scroll-element .scroll-element_track { background-color: rgba(171, 190, 209, 0.31); } /* полоса  */
-.scrollbar-inner > .scroll-element .scroll-bar { background-color: #ABBED1; } /* сам ползунок */
+.scrollbar-inner > .scroll-element .scroll-bar { background-color: @color-blue-4; } /* сам ползунок */
 .scrollbar-inner > .scroll-element:hover .scroll-bar { background-color: #919191; }
 .scrollbar-inner > .scroll-element.scroll-draggable .scroll-bar { background-color: #919191; }
 
