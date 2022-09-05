@@ -113,7 +113,7 @@ function styles(){
    .pipe(gulpif(isProd, cleanCSS({
       level: 2
    })))
-   .pipe(gulpif(isDev, sourcemaps.write()))
+   .pipe(gulpif(isDev, sourcemaps.write() ))
    .pipe(gulp.dest( dist + 'css'))
    .pipe(gulpif(isSync, browserSync.stream()))
 }
@@ -139,7 +139,7 @@ function data(done){
 function js(done){
    return gulp.src( src + 'js/concat/**/*')
    .pipe(concat( 'build.js' ))
-   // .pipe(uglify())
+   .pipe(gulpif(isProd, uglify()))
    .pipe(gulp.dest( dist + 'js'));
    done();
 }
