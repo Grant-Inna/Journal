@@ -1,5 +1,5 @@
 $(document).ready(function() {
-   /* faq */
+   /* года */
    
    if($('.question-holder').length > 0 ) {
       let $question_holder = $('.question-holder'),
@@ -12,7 +12,7 @@ $(document).ready(function() {
       
       if ($(this).parent().hasClass('open')) {
          answer.fadeOut();
-         $(this).parent().removeClass('open')
+         $('.trigger-holder').find('.open').removeClass('open')
       } else {
          answer.fadeIn();
          $(this).parent().addClass('open')
