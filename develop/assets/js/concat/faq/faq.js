@@ -5,8 +5,8 @@ $(document).ready(function () {
       let $question_holder = $('.question-holder'),
           $title = $('.question-theme');
       
-      $('.question-holder:first-child').addClass('open');
-      $('.open .answer-text').slideDown(350);
+      $('.archive__content .question-holder:first-child').addClass('open');
+      $('.archive__content .open .answer-text').slideDown(350);
       
       // $('.open').find('.answer-text').style('display', 'block');
       
