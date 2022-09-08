@@ -68,19 +68,26 @@
    color: @color-black;
    
    .to(840px, {
-    max-width: 370px;
+      max-width: 370px;
    });
-   .sm-block({
+   .to(580px, {
       max-width: 290px;
       margin-top: 2px;
    });
-
+   .to(430px, {
+      max-width: 155px;
+      margin-bottom: 3rem;
+   });
 }
 .pages__menu_holder .active {
    color: @color-lilac-1;
    .tr();
 }
-
+.container-page .header__logo .h3 {
+   .to(340px, {
+      display: none;
+   });
+}
 
 
 @keyframes load_to_left {
