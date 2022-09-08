@@ -1,10 +1,10 @@
-mixin slider( img, number, date )
+mixin slider( n, number, date )
    .slider__main
       .slider__journal_holder
          .slider__cover
-            img( src='assets/images/journal/#{img}.png?v=3' ).slider__cover_image
+            img( src='assets/images/journal/#{n}.png?v=3' ).slider__cover_image
          .slider__info
-            .slider__number &#8470;!{number} [#{img}]
+            .slider__number &#8470;!{number} [#{n}]
             .slider__dating #{date}
             .slider__buttons
-               a( href='./archive.html' ).slider__about содержание
+               a( href='./archive.html#journal_#{n}' ).slider__about содержание
