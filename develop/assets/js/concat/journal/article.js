@@ -3,25 +3,9 @@ $(document).ready(function() {
    
    if($('.archive__journal').length > 0 ) {
       
-      $('.trigger').on( 'click', showJournal); // Выбор номера и показ соответствующего журнала
-      
       $('article').on( 'click', showArticle); // Выбор стати и показ её маленького обзора + кнопки назад
-      
       $('.back').on( 'click', back ); // нажатие на кнопку назад, скрытие статьи и показ списка
       
-   }
-   
-   function showJournal() {
-      let $number = $(this).find('span').text(),
-          $journal = $('#journal_' + $number);
-          
-         $('.archive__journal').not($journal).removeClass('active_journal').hide();
-         $journal.addClass('active_journal').show();
-         
-         $('.trigger').removeClass('active_year');
-         $(this).addClass('active_year');
-         
-         back();
    }
    
    function showArticle() {
@@ -33,8 +17,8 @@ $(document).ready(function() {
       
    }
    function back() {
-      $('.back').fadeOut();
-      $('.active_article').fadeOut(400);
+      $('.back').hide();
+      $('.active_article').hide();
       
       $('.journal__content').show();
       

@@ -2,20 +2,27 @@ $(document).ready(function () {
    /* года */
    
    if ($('.archive__content').length > 0) {
-      let $question_holder = $('.question-holder'),
+      let $year_holder = $('.question-holder'),
           $title = $('.question-theme');
       
-      $('.question-holder:first-child').addClass('open');
-      $('.open .answer-text').slideDown(350);
+      let first_year_holder = $('.question-holder:first-child');
       
-      $question_holder.find($title).on('click', openYear);
+      if (document.location.hash.length == 0 ) { // Если идём через hash, то добавлять классы не нужно
+         first_year_holder.addClass('open');
+         $('.open .answer-text').slideDown(350);
+         $('.open .trigger:first-child').addClass('active_number'); // Подсвечиваем первый выпуск за последний год
+      } else {
+         first_year_holder.removeClass('open'); // Убираем класс и показываем иконку
+      }
+      
+      $year_holder.find($title).on('click', openYear);
    }
    
    function openYear() {
       let answer = $('#question-' + $(this).data('question')),
           s = 500;
       
-      if (!$(this).parent().hasClass('open')) {
+      if (!$(this).parent().hasClass('open')) { // Проверка, открыт ли год
          $('.open').removeClass('open');
          $('.answer-text').slideUp(s);
          answer.slideDown(s);
@@ -26,10 +33,10 @@ $(document).ready(function () {
    /* требования к статье  */
    
    if ($('.requirements__list').length > 0) {
-      let $question_holder = $('.question-holder'),
+      let $year_holder = $('.question-holder'),
           $title = $('.question-theme');
       
-      $question_holder.find($title).on('click', openRequirements);
+      $year_holder.find($title).on('click', openRequirements);
    }
    
    function openRequirements() {
