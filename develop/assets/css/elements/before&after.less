@@ -171,14 +171,21 @@ section.slider__holder {
 .about__holder:before {
    .after();
    height: 100%;
-   width: 57%;
+   min-width: 100%;
    z-index: 5;
    
-   bottom: -1rem;
-   left: -1rem;
+   bottom: 0;
+   left: 0;
    .about_after();
    
-   .xl(display, none)
+   .to( 1765px, {
+      left: -3vw;
+      min-width: calc(110% + 3vw);
+   });
+   .to( 1415px, {
+      opacity: .95;
+   });
+   .xl(display, none);
 }
 
 .relevance__content:before {
