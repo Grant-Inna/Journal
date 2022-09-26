@@ -1,12 +1,34 @@
-mixin article_text( article, subject, title, type, name, about, text )
+mixin article_text( article, subject, title, type, name, about, text, name_en, about_en1, about_email1, text_en, keywords, keywords_en  )
    .article__read( id='article_#{article}' )
       .article__subject !{subject}
       .article__theme !{title}
       .article__meta
          b.mr-05 Тип статьи:
          span #{type}
-      .article__meta
-         b.mr-05 Автор:
-         span #{name}
-      .article__author !{about}
-      .article__text !{text}
+      .article__ru
+         .article__meta
+            b.mr-05 Автор:
+            span #{name}
+         .article__author !{about}
+      .article__en
+         .article__meta
+            b.mr-05 Author:
+            span #{name_en}
+         .article__author !{about_en1}
+         .article__mail.mt-03
+            b.mr-05 e-mail:
+            span !{about_email1}
+      
+      .article__ru.mb-1
+         b.article__meta Аннотация
+         .article__text !{text}
+      .article__en
+         b.article__meta Abstract
+         .article__text !{text_en}
+
+      .article__ru.mt-2
+         b.article__meta Ключевые слова
+         .article__text !{keywords}
+      .article__en
+         b.article__meta Keywords
+         .article__text !{keywords_en}

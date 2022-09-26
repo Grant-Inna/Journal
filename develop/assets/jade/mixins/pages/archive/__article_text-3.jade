@@ -1,20 +1,62 @@
-mixin article_text-3( article, subject, title, type, name, about, name2, about2, name3, about3, text )
+mixin article_text-3( article, subject, title, type, name, about, name2, about2, name3, about3, text, name_en1, about_en1, about_email1, name_en2, about_en2, about_email2, name_en3, about_en3, about_email3, text_en, keywords, keywords_en  )
    .article__read( id='article_#{article}' )
       .article__subject !{subject}
       .article__theme !{title}
       .article__meta
          b.mr-05 Тип статьи:
          span #{type}
-      .article__meta
-         b.mr-05 Автор:
-         span #{name}
-      .article__author.mb-05 !{about}
-      .article__meta.mt-02
-         b.mr-05 Автор:
-         span #{name2}
-      .article__author.mb-05 !{about2}
-      .article__meta.mt-02
-         b.mr-05 Автор:
-         span #{name3}
-      .article__author !{about3}
-      .article__text !{text}
+      .article__ru
+         .article__meta
+            b.mr-05 Автор:
+            span #{name}
+         .article__author !{about}
+      .article__en
+         .article__meta
+            b.mr-05 Author:
+            span #{name_en1}
+         .article__author !{about_en1}
+         .article__mail.mt-03
+            b.mr-05 e-mail:
+            span !{about_email1}
+
+      .article__ru
+         .article__meta
+            b.mr-05 Автор:
+            span #{name2}
+         .article__author !{about2}
+      .article__en
+         .article__meta
+            b.mr-05 Author:
+            span #{name_en2}
+         .article__author !{about_en2}
+         .article__mail.mt-03
+            b.mr-05 e-mail:
+            span !{about_email2}
+
+      .article__ru
+         .article__meta
+            b.mr-05 Автор:
+            span #{name3}
+         .article__author !{about3}
+      .article__en
+         .article__meta
+            b.mr-05 Author:
+            span #{name_en3}
+         .article__author !{about_en3}
+         .article__mail.mt-03
+            b.mr-05 e-mail:
+            span !{about_email3}
+
+      .article__ru.mb-1
+         b.article__meta Аннотация
+         .article__text !{text}
+      .article__en
+         b.article__meta Abstract
+         .article__text !{text_en}
+
+      .article__ru.mt-2
+         b.article__meta Ключевые слова
+         .article__text !{keywords}
+      .article__en
+         b.article__meta Keywords
+         .article__text !{keywords_en}
