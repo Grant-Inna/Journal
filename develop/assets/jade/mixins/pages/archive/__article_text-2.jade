@@ -1,7 +1,8 @@
-mixin article_text-2( article, subject, title, type, name, about, name2, about2, text, name_en1, about_en1, about_email1, name_en2, about_en2, about_email2, text_en, keywords, keywords_en )
+mixin article_text-2( article, subject, type, title, title_en, name, about, name_en1, about_en1, about_email1, name2, about2, name_en2, about_en2, about_email2, text, text_en, keywords, keywords_en )
    .article__read( id='article_#{article}' )
       .article__subject !{subject}
-      .article__theme !{title}
+      .article__theme.mb-03 !{title}
+      .article__theme !{title_en}
       .article__meta
          b.mr-05 Тип статьи:
          span #{type}
@@ -33,7 +34,7 @@ mixin article_text-2( article, subject, title, type, name, about, name2, about2,
             b.mr-05 e-mail:
             span !{about_email2}
 
-      .article__ru.mb-1
+      .article__ru.mb-1.mt-25
          b.article__meta Аннотация
          .article__text !{text}
       .article__en
