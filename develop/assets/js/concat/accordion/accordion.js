@@ -10,7 +10,7 @@ $(document).ready(function () {
       if (document.location.hash.length == 0 ) { // Если идём через hash, то добавлять классы не нужно
          first_year_holder.addClass('open');
          $('.open .answer-text').slideDown(350);
-         $('.open .trigger:first-child').addClass('active_number'); // Подсвечиваем первый выпуск за последний год
+         $('.open .trigger:last-child').addClass('active_number'); // Подсвечиваем последний выпуск за последний год
       } else {
          first_year_holder.removeClass('open'); // Убираем класс и показываем иконку
       }
