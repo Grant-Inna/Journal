@@ -13,14 +13,13 @@ $(document).ready(function() {
       $journal.addClass('active_journal').show();
       
       addClassNumber($number); // Подсвечивает слева номер выпуска, выбранного нажатием или через hash
-      $('body, html').scrollTop(0);
+      // $('body, html').scrollTop(0);
    }
    
    
    if (document.location.hash.length != 0 ) { // Если номер вызывается через hash
       $journal = $(document.location.hash);
       showHashJournal($journal);
-      console.log($journal);
       
       let current_issue = $journal.prop('id').split('_')[1];
       addClassNumber(current_issue); // Подсвечивает слева номер выпуска, выбранного нажатием или через hash
