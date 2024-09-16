@@ -1,0 +1,17 @@
+mixin article_spec( article, subject, type, title, name, about, text  )
+   .article__read( id='article_#{article}' )
+      .article__subject !{subject}
+      .article__theme.mb-05 !{title}
+      .article__meta
+         b.mr-05 Тип статьи:
+         span #{type}
+      .article__ru
+         .article__meta
+            b.mr-05 Автор:
+            span #{name}
+         .article__author !{about}
+
+      .article__ru.mb-1.mt-25
+         b.article__meta Аннотация
+         .article__text !{text}
+
