@@ -1,11 +1,11 @@
-mixin year( n, year, num, extra )
+mixin year( year, num, extra )
    - var num1 = num + 1;
    - var num2 = num + 2;
    - var num3 = num + 3;
    .archive__block.question-holder
-      .archive__year.question-theme( data-question='#{n}' )
+      .archive__year.question-theme( data-question='#{year}' )
          span 20#{year}
-      .archive__number_holder.answer-text( id='question-#{n}' )
+      .archive__number_holder.answer-text( id='question-#{year}' )
          .archive__number.trigger( id='number-#{num}' )
             b.mr-05 &#8470;1
             i (
