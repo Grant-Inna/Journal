@@ -102,7 +102,7 @@ $(document).ready(function() {
       // $('body, html').scrollTop(0);
    }
    
-   
+   console.log(document.location.hash);
    if (document.location.hash.length != 0 ) { // Если номер вызывается через hash
       $journal = $(document.location.hash);
       showHashJournal($journal);
@@ -131,10 +131,13 @@ $(document).ready(function() {
    
    
    function addClassNumber(number) { // Подсвечивает слева номер выпуска, выбранного нажатием или через hash
-      let current_number = $('#number-' + number );
+      let current_number = $('#number-' + number ),
+          $journal_section = $('.journal__section'),
+          article = $journal_section.find('article');
       
       $('.trigger').not(current_number).removeClass('active_number'); // Убираем подсветку у всех выпусков кроме нашего
       $(current_number).addClass('active_number'); // Добавляем подсветку нашему номеру
+
    }
 });
 
